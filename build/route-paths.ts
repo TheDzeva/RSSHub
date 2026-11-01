@@ -1697,8 +1697,8 @@ export type RoutePath =
   | `/hnust/jwc`
   | `/home-assistant/hacs/repositories`
   | `/homes/chintai/:pref/:city/:page?`
-  | `/homes/kodate/chuko/:pref/:city`
-  | `/homes/mansion/chuko/:pref/:city`
+  | `/homes/kodate/chuko/:pref/:city/:page?`
+  | `/homes/mansion/chuko/:pref/:city/:page?`
   | `/hongkong/chp/:category?/:language?`
   | `/hongkong/dh/:language?`
   | `/hostmonit/cloudflareyes/:type?`
@@ -3844,6 +3844,7 @@ export type RoutePath =
   | `/xyzrank/hot-episodes-new`
   | `/xyzrank/hot-podcasts`
   | `/xyzrank/new-podcasts`
+  | `/yahoo/auctions/search/:query`
   | `/yahoo/author/:author`
   | `/yahoo/finance/:topic?`
   | `/yahoo/finance/hk/:topic?`
