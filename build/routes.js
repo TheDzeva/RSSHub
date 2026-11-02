@@ -22775,7 +22775,7 @@ export default {
         "categories": [
           "game"
         ],
-        "example": "/mihoyo/bbs/official/2/3/20/",
+        "example": "/mihoyo/bbs/official/2/3/20",
         "parameters": {
           "gids": "游戏id",
           "type": "公告类型，默认为 2(即 活动)",
@@ -48008,7 +48008,7 @@ export default {
         "categories": [
           "anime"
         ],
-        "example": "/collabo-cafe/",
+        "example": "/collabo-cafe",
         "features": {
           "requireConfig": false,
           "requirePuppeteer": false,
@@ -123200,7 +123200,7 @@ export default {
         "maintainers": [
           "henbf"
         ],
-        "description": "| 全部 | 学院新闻 | 学术活动 | 城市建设学院 | 信息工程学院 | 经济学院 | 管理学院 | 材料系 | 机械工程系 | 护理系 | 法律系 | 外语系 | 艺术系 |\n| ---- | -------- | -------- | ------------ | ------------ | -------- | -------- | ------ | ---------- | ------ | ------ | ------ | ------ |\n| all  | xyxw     | xshhd    | csjsxy       | xxgcxy       | jjx      | glxy     | clx    | jxgcx      | hlx    | flx    | wyx    | ysx    |",
+        "description": "| 全部 | 学院新闻 | 城市建设学院 | 材料科学与工程学院 | 智能制造学院 | 人工智能学院 | 低空技术与工程学院 | 经济学院 | 管理学院 |\n| ---- | -------- | ------------ | ------------------ | ------------ | ------------ | ------------------ | -------- | -------- |\n| all  | xyxw     | csjsxy       | clkxygcxy          | znzzxy       | rgznxy       | dkjsygcxy          | jjxy     | glxy     |\n\n| 大健康学院 | 外国语学院 | 艺术学院 | 法学院 | 劳动学院 | 马克思主义学院 | 明德通识学院 | 体育部 | 基础部 |\n| ---------- | ---------- | -------- | ------ | -------- | -------------- | ------------ | ------ | ------ |\n| djkxy      | wgyxy      | ysxy     | fxy    | ldxy     | mkszyxy        | mdtsxy       | tyb    | jcb    |",
         "location": "tj/news.ts",
         "module": () => import('@/routes/ustb/tj/news.ts')
       },
@@ -150965,7 +150965,7 @@ export default {
         "categories": [
           "government"
         ],
-        "example": "/gov/tianjin/tjrcgzw-notice/rczc/sjrczc/",
+        "example": "/gov/tianjin/tjrcgzw-notice/rczc/sjrczc",
         "parameters": {
           "cate": "栏目分类，可在源网站 URL 中找到，例如 rczc（人才政策）",
           "subCate": "子栏目分类，例如 sjrczc（市级人才政策）"
