@@ -2,7 +2,7 @@ name: Sync fork
 
 on:
     schedule:
-        - cron: '17 4 * * *'
+        - cron: '0 10 * * *'
     workflow_dispatch:
 
 jobs:
@@ -19,4 +19,4 @@ jobs:
               env:
                   GH_TOKEN: ${{ secrets.SYNC_TOKEN || github.token }}
                   FORK_REPO: ${{ github.repository }}
-              run: gh repo sync "${FORK_REPO}"
+              run: gh repo sync ${{ github.repository }} --branch main
