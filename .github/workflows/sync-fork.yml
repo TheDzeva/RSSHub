@@ -19,4 +19,4 @@ jobs:
               env:
                   GH_TOKEN: ${{ secrets.SYNC_TOKEN || github.token }}
                   FORK_REPO: ${{ github.repository }}
-              run: gh repo sync ${{ github.repository }} --branch main
+              run: gh repo sync ${{ github.repository }} --branch master
