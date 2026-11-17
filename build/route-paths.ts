@@ -672,6 +672,7 @@ export type RoutePath =
   | `/cjlu/yjsy/:cate`
   | `/claude/blog`
   | `/claude/code/changelog`
+  | `/claude/dev/blog`
   | `/clickme/:site/:grouping/:name`
   | `/cline/blog`
   | `/cloudflare/blog`
@@ -2040,6 +2041,7 @@ export type RoutePath =
   | `/keyakizaka46/blog`
   | `/keyakizaka46/news`
   | `/keylol/:path`
+  | `/kimi/blog`
   | `/kimlaw/thesis`
   | `/kiro/blog`
   | `/kiro/changelog`
