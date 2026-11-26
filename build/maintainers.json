@@ -11136,6 +11136,9 @@
   "/gov/shenzhen/yantian/ytjsj/:caty?": [
     "nuomi1"
   ],
+  "/gov/shenzhen/zjj/gkmlpt/:caty?": [
+    "nuomi1"
+  ],
   "/gov/shenzhen/hrss/szksy/:caty/:page?": [
     "zlasd"
   ],
@@ -12108,6 +12111,9 @@
   ],
   "/queshu/sale": [
     "kt286"
+  ],
+  "/restofworld/latest": [
+    "ljh12138164"
   ],
   "/ruancan/category/:category?": [
     "nczitzk"
