@@ -15988,6 +15988,154 @@ export default {
     "url": "ixigua.com",
     "lang": "zh-CN"
   },
+  "jandan": {
+    "routes": {
+      "/:category/:type?": {
+        "path": "/:category/:type?",
+        "example": "/jandan/top",
+        "name": "Section",
+        "maintainers": [
+          "kobemtl",
+          "Xuanwo",
+          "xyqfer",
+          "9uanhuo",
+          "nczitzk",
+          "pseudoyu"
+        ],
+        "parameters": {
+          "category": {
+            "description": "板块",
+            "options": [
+              {
+                "label": "热榜",
+                "value": "top"
+              },
+              {
+                "label": "树洞",
+                "value": "treehole"
+              },
+              {
+                "label": "随手拍",
+                "value": "ooxx"
+              },
+              {
+                "label": "女装",
+                "value": "beauty"
+              },
+              {
+                "label": "无聊图",
+                "value": "pic"
+              },
+              {
+                "label": "鱼塘",
+                "value": "bbs"
+              }
+            ]
+          },
+          "type": {
+            "description": "热榜类型，仅当 category 选择 `top` 时有效",
+            "default": "4hr",
+            "options": [
+              {
+                "label": "4小时热门",
+                "value": "4hr"
+              },
+              {
+                "label": "3天内无聊图",
+                "value": "pic3days"
+              },
+              {
+                "label": "7天内无聊图",
+                "value": "pic7days"
+              }
+            ]
+          }
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jandan.net/top"
+            ],
+            "target": "/top"
+          },
+          {
+            "source": [
+              "jandan.net/treehole"
+            ],
+            "target": "/treehole"
+          },
+          {
+            "source": [
+              "jandan.net/ooxx"
+            ],
+            "target": "/ooxx"
+          },
+          {
+            "source": [
+              "jandan.net/beauty"
+            ],
+            "target": "/beauty"
+          },
+          {
+            "source": [
+              "jandan.net/pic"
+            ],
+            "target": "/pic"
+          },
+          {
+            "source": [
+              "jandan.net/forum"
+            ],
+            "target": "/bbs"
+          }
+        ],
+        "location": "section.ts",
+        "module": () => import('@/routes/jandan/section.ts')
+      },
+      "/": {
+        "path": "/",
+        "example": "/jandan",
+        "name": "Feed",
+        "maintainers": [
+          "lonelykid",
+          "nczitzk",
+          "bigfei",
+          "pseudoyu"
+        ],
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jandan.net/"
+            ],
+            "target": "/"
+          }
+        ],
+        "location": "index.ts",
+        "module": () => import('@/routes/jandan/index.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "煎蛋",
+    "url": "jandan.net",
+    "lang": "zh-CN"
+  },
   "jin10": {
     "routes": {
       "/category/:id": {
@@ -142922,7 +143070,55 @@ export default {
         ],
         "example": "/dapenti/subject/184",
         "parameters": {
-          "id": "主题 id"
+          "id": {
+            "description": "栏目，可在栏目页 URL 的 `channel` 参数中找到",
+            "options": [
+              {
+                "value": "agile",
+                "label": "乐活"
+              },
+              {
+                "value": "aieverything",
+                "label": "AI Everything"
+              },
+              {
+                "value": "caijing",
+                "label": "财经风云"
+              },
+              {
+                "value": "changyuedu",
+                "label": "长阅读"
+              },
+              {
+                "value": "dianying",
+                "label": "乐影"
+              },
+              {
+                "value": "fushihui",
+                "label": "浮世汇"
+              },
+              {
+                "value": "piaoquan",
+                "label": "铂程的票圈"
+              },
+              {
+                "value": "shijieguan",
+                "label": "世界观"
+              },
+              {
+                "value": "tugua",
+                "label": "喷嚏图卦"
+              },
+              {
+                "value": "xilei",
+                "label": "铂程斋"
+              },
+              {
+                "value": "youxuan",
+                "label": "喷嚏优选"
+              }
+            ]
+          }
         },
         "features": {
           "requireConfig": false,
@@ -157023,164 +157219,6 @@ export default {
     ],
     "lang": "zh-CN"
   },
-  "jandan": {
-    "routes": {
-      "/": {
-        "path": "/",
-        "example": "/jandan",
-        "name": "Feed",
-        "maintainers": [
-          "lonelykid",
-          "nczitzk",
-          "bigfei",
-          "pseudoyu"
-        ],
-        "parameters": {},
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "i.jandan.net"
-            ],
-            "target": "/"
-          }
-        ],
-        "location": "index.ts",
-        "module": () => import('@/routes/jandan/index.ts')
-      },
-      "/:category/:type?": {
-        "path": "/:category/:type?",
-        "example": "/jandan/top",
-        "name": "Section",
-        "maintainers": [
-          "kobemtl",
-          "Xuanwo",
-          "xyqfer",
-          "9uanhuo",
-          "nczitzk",
-          "pseudoyu"
-        ],
-        "parameters": {
-          "category": {
-            "description": "板块",
-            "options": [
-              {
-                "label": "热榜",
-                "value": "top"
-              },
-              {
-                "label": "问答",
-                "value": "qa"
-              },
-              {
-                "label": "树洞",
-                "value": "treehole"
-              },
-              {
-                "label": "随手拍",
-                "value": "ooxx"
-              },
-              {
-                "label": "女装",
-                "value": "beauty"
-              },
-              {
-                "label": "无聊图",
-                "value": "pic"
-              },
-              {
-                "label": "鱼塘",
-                "value": "bbs"
-              }
-            ]
-          },
-          "type": {
-            "description": "热榜类型，仅当 category 选择 `top` 时有效",
-            "default": "4hr",
-            "options": [
-              {
-                "label": "4小时热门",
-                "value": "4hr"
-              },
-              {
-                "label": "3天内无聊图",
-                "value": "pic3days"
-              },
-              {
-                "label": "7天内无聊图",
-                "value": "pic7days"
-              }
-            ]
-          }
-        },
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "i.jandan.net/top"
-            ],
-            "target": "/top"
-          },
-          {
-            "source": [
-              "i.jandan.net/qa"
-            ],
-            "target": "/qa"
-          },
-          {
-            "source": [
-              "i.jandan.net/treehole"
-            ],
-            "target": "/treehole"
-          },
-          {
-            "source": [
-              "i.jandan.net/ooxx"
-            ],
-            "target": "/ooxx"
-          },
-          {
-            "source": [
-              "i.jandan.net/beauty"
-            ],
-            "target": "/beauty"
-          },
-          {
-            "source": [
-              "i.jandan.net/pic"
-            ],
-            "target": "/pic"
-          },
-          {
-            "source": [
-              "i.jandan.net/bbs"
-            ],
-            "target": "/bbs"
-          }
-        ],
-        "location": "section.ts",
-        "module": () => import('@/routes/jandan/section.ts')
-      }
-    },
-    "apiRoutes": {},
-    "name": "煎蛋",
-    "url": "jandan.net",
-    "lang": "zh-CN"
-  },
   "japanpost": {
     "routes": {
       "/track/:reqCode/:locale?": {
@@ -165808,6 +165846,54 @@ export default {
     "url": "subhd.tv",
     "lang": "zh-CN"
   },
+  "supabase": {
+    "routes": {
+      "/blog": {
+        "path": "/blog",
+        "name": "Blog",
+        "url": "supabase.com/blog",
+        "example": "/supabase/blog",
+        "categories": [
+          "programming"
+        ],
+        "view": 0,
+        "maintainers": [
+          "ljh12138164"
+        ],
+        "description": "Latest full-text articles from the official Supabase Blog (`supabase.com/blog`), enriching the excerpt-only official RSS feed with complete article content, normalized code blocks, categories, authors, and media.",
+        "zh": {
+          "name": "博客",
+          "description": "获取 Supabase 官方博客（`supabase.com/blog`）最新全文文章，在官方摘要 RSS 基础上补全完整正文、格式化代码块、分类标签、作者与媒体内容。"
+        },
+        "radar": [
+          {
+            "source": [
+              "supabase.com/blog",
+              "supabase.com/blog/*"
+            ],
+            "target": "/blog"
+          }
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "location": "blog.ts",
+        "module": () => import('@/routes/supabase/blog.ts')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Supabase",
+    "url": "supabase.com",
+    "lang": "en",
+    "zh": {
+      "name": "Supabase"
+    }
+  },
   "suumo": {
     "routes": {
       "/chintai/:pref/:city/:page?": {
@@ -167271,6 +167357,27 @@ export default {
         "url": "bksy.tongji.edu.cn/",
         "location": "bks.ts",
         "module": () => import('@/routes/tongji/bks.ts')
+      },
+      "/cs": {
+        "path": "/cs",
+        "name": "计算机科学与技术学院通知公告",
+        "example": "/tongji/cs",
+        "categories": [
+          "university"
+        ],
+        "maintainers": [
+          "MXH814"
+        ],
+        "url": "cs.tongji.edu.cn/index/tzgg.htm",
+        "radar": [
+          {
+            "source": [
+              "cs.tongji.edu.cn/index/tzgg.htm"
+            ]
+          }
+        ],
+        "location": "cs.ts",
+        "module": () => import('@/routes/tongji/cs.ts')
       },
       "/gs": {
         "path": "/gs",
